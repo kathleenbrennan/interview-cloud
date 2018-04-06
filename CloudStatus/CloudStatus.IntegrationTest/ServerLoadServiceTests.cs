@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace CloudStatus.IntegrationTest
 {
     [TestClass]
-    public class UnitTest1
+    public class ServerLoadServiceTests
     {
         [TestMethod]
         public void TestMethod1()
