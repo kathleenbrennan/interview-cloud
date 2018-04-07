@@ -12,9 +12,9 @@ namespace CloudStatus.Library.Repositories
         {
             data.Add(transaction);
 
-            // in a production system this CQRS pattern would be supported by
-            // a message queue or service bus that would independently
-            // synchronize the read-only data store from a set of transactions.
+            // in a production system this CQRS pattern would write the transactions to
+            // an event queue, and an independent process would independently
+            // synchronize the read-only data store from the set of queued transactions.
             // Here, for simplicity, we are just writing the data from the transaction
             // directly to the in-memory data store.
         }

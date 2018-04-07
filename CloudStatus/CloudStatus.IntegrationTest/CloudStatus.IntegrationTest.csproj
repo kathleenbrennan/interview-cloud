@@ -53,6 +53,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CloudStatus.Api\CloudStatus.Api.csproj">
+      <Project>{fe897c57-8b13-4771-a60e-2f598d318d74}</Project>
+      <Name>CloudStatus.Api</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CloudStatus\CloudStatus.Library.csproj">
       <Project>{ed9f57d9-c362-401a-9784-f9e97ff45f9f}</Project>
       <Name>CloudStatus.Library</Name>

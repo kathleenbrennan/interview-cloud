@@ -1,5 +1,4 @@
 ﻿using CloudStatus.Library.Models;
-using System;
 using System.Threading.Tasks;
 
 namespace CloudStatus.Library.Repositories

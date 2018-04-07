@@ -1,6 +1,5 @@
 ﻿using CloudStatus.Library.Repositories;
 using CloudStatus.Library.Models;
-using CloudStatus.Library.Validators;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -13,7 +12,6 @@ namespace CloudStatus.Library.Services
         //CQRS separation of read and write repositories so each can be optimized
         private readonly ITransactionRepository transactionRepository;
         private readonly IQueryRepository queryRepository;
-        private ServerLoadDataValidator serverLoadDataValidator;
 
         public ServerLoadService()
         {
@@ -25,11 +23,7 @@ namespace CloudStatus.Library.Services
 
         public async Task Record(ServerLoadTransaction data)
         {
-            this.serverLoadDataValidator = new ServerLoadDataValidator(data);
-            if(!this.serverLoadDataValidator.IsValid())
-            {
-                throw new ValidationException("Unable to store data due to invalid properties");
-            }
+            
             await this.transactionRepository.RecordServerLoad(data);
         }
 

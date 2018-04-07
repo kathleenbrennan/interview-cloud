@@ -20,7 +20,7 @@ namespace CloudStatus.Api.Controllers
         [HttpGet]
         public async Task<List<ServerLoadResponse>> Get()
         {
-            var data = await this.ServerLoadService.RetrieveAveragesByMinuteLastHour();
+            var data = await this.ServerLoadService.RetrieveAveragesByHourLastDay();
 
             // normally we would use AutoMapper here instead of manually mapping
 
