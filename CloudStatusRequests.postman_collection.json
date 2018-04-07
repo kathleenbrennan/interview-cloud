@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "ddfa37e3-e0c7-4db0-89c9-45c83ea35d8f",
+		"name": "CloudStatusRequests",
+		"description": "A collection of requests to be used to demo the CloudStatus API.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:50578/api/serverloadbyhour",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:50578/api/serverloadbyhour",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50578",
+					"path": [
+						"api",
+						"serverloadbyhour"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:50578/api/serverloadbyday",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:50578/api/serverloadbyday",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50578",
+					"path": [
+						"api",
+						"serverloadbyday"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:50578/api/serverloadtransaction",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"TimeStamp\": \"2018-04-06T17:00:00\",\n        \"CpuLoad\": 49.727682821558645,\n        \"RamLoad\": 57.444805428360048,\n        \"ServerName\" : \"MyPostmanServer\"\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:50578/api/serverloadtransaction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50578",
+					"path": [
+						"api",
+						"serverloadtransaction"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
