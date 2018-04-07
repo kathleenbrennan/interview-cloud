@@ -7,9 +7,9 @@ namespace CloudStatus.Library.Repositories
     public class TransactionRepository : ITransactionRepository
     {
 
-        public Task RecordServerLoad(ServerLoadTransaction data)
+        public async Task RecordServerLoad(ServerLoadTransaction data)
         {
-            throw new NotImplementedException();
+            DataStore.WriteTransaction(data);
         }
     }
 }

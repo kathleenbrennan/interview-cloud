@@ -35,12 +35,16 @@ namespace CloudStatus.Library.Services
 
         public async Task<List<ServerLoad>> RetrieveAveragesByMinuteLastHour()
         {
-            return await this.queryRepository.RetrieveAveragesByMinute(DateTime.Now.AddHours(-1), DateTime.Now);
+            return await this.queryRepository.RetrieveAveragesByMinute(
+                DateTime.Now.AddHours(-1), 
+                DateTime.Now);
         }
 
         public async Task<List<ServerLoad>> RetrieveAveragesByHourLastDay()
         {
-            return await this.queryRepository.RetrieveAveragesByHour(DateTime.Now.AddDays(-1), DateTime.Now);
+            return await this.queryRepository.RetrieveAveragesByHour(
+                DateTime.Now.AddDays(-1), 
+                DateTime.Now);
         }
     }
 }
